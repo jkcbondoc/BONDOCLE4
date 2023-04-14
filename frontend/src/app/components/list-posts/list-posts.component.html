@@ -1,4 +1,40 @@
-<div *ngFor="let post of posts">
-    <h3><a href="/posts/{{ post.id }}"> {{ post.title }} </a></h3>
-    <p>by {{ post.firstName }} {{ post.lastName }} ; on {{ post.dateCreated }}</p>
-</div>
+<style>
+
+body{
+    background-color: lightblue;
+    border-style: dashed;
+}
+
+div{
+    border-style: dashed;
+}
+
+a {
+    color:black;
+}
+
+a:visited {
+    color:white;
+}
+
+h3 {
+    color:black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    color:black;
+    text-align: center;
+    font-family: sans-serif;
+    font: size 22px;
+}
+</style>
+
+<body>
+    <div *ngFor="let post of posts">
+        <h3><a href="/posts/{{ post.id }}"> {{ post.title }} </a></h3>
+        <p>by {{ post.firstName }} {{ post.lastName }} ; on {{ post.dateCreated }}</p>
+    </div>
+</body>
+

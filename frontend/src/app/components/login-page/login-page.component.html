@@ -1,21 +1,67 @@
+<style>
+  body{
+      background-color: lightblue;
+      border-style: dashed;
+  }
+
+  div{
+    text-align: center;
+  }
+  
+  h1 {
+      color:navy;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h3 {
+      color:black;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  label{
+      color:black;
+      text-align: center;
+      font-family: sans-serif;
+      font: size 22px;
+  }
+  input[type=text], input[type=password]{
+    border:1px solid #ccc;
+    display: inline-block;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 30%;
+  }
+
+  button{
+    text-align: center;
+  }
+  </style>
+
+<body>
 <div>
-    <h1>Hi Welcome Back</h1>
+    <h1>Hi, Welcome Back!</h1>
      <h3>Login Here</h3>
       <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
         <div>
-          <label for="username">Email</label>
+          <label for="username">Email:    </label>
           <input  
             required  
             type="text" 
             name="username" 
             [(ngModel)]="form.username" 
             #username="ngModel">
-          <label for="password">Password</label>
+          <br />
+          <label for="password">Password: </label>
           <input type="password" 
             name="password" 
             [(ngModel)]="form.password" 
             required #password="ngModel">
         </div>
+        <br />
         <button>Submit</button>
+        <br />
       </form>
   </div>
+  </body>
